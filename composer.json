@@ -1,6 +1,7 @@
 {
     "name": "jklejczyk/tpm-core",
     "description": "TPM domain library",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -21,14 +22,12 @@
         "deptrac/deptrac": "^2.0"
     },
     "scripts": {
-        "test": "pest",
-        "stan": "phpstan analyse src --level=9",
-        "deptrac": "deptrac analyse",
-        "check": ["@test", "@stan", "@deptrac"]
+        "check": ["pest", "phpstan analyse", "deptrac analyse"]
     },
     "config": {
         "allow-plugins": { "pestphp/pest-plugin": true },
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": { "php": "8.3.0" }
     },
     "minimum-stability": "stable"
 }

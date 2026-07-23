@@ -1,0 +1,26 @@
+deptrac:
+  paths:
+    - ./src
+  layers:
+    - name: Shared
+      collectors:
+        - type: directory
+          value: src/Shared/.*
+    - name: Machine
+      collectors:
+        - type: directory
+          value: src/Machine/.*
+    - name: WorkOrder
+      collectors:
+        - type: directory
+          value: src/WorkOrder/.*
+    - name: Framework
+      collectors:
+        - type: className
+          value: ^(Illuminate|Symfony)\\.*
+  ruleset:
+    Shared: ~
+    Machine:
+      - Shared
+    WorkOrder:
+      - Shared
