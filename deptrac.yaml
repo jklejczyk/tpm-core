@@ -16,8 +16,8 @@ deptrac:
           value: src/WorkOrder/.*
     - name: Framework
       collectors:
-        - type: className
-          value: ^(Illuminate|Symfony)\\.*
+        - type: classNameRegex
+          value: '#^(Illuminate|Symfony)\\#'
   ruleset:
     Shared: ~
     Machine:

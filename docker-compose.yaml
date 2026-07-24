@@ -4,3 +4,5 @@ services:
     volumes:
       - ./src:/package/src
       - ./tests:/package/tests
+      - ./deptrac.yaml:/package/deptrac.yaml
+      - ./phpstan.neon:/package/phpstan.neon
